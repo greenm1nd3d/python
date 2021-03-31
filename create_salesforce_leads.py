@@ -90,9 +90,9 @@ def create_salesforce_lead(customer_data):
                'company': customer_data['company_name'],
                'email': customer_data['email'],
                'lead_source': 'Claim-Pay-Per-Listing Lead',
-               'oid': '00D90000000lh7Z',
+               'oid': '00D90000000lh7Q',
                'phone': customer_data['mobile'],
-               'recordType': '012900000009EYq'}
+               'recordType': '012900000009EYz'}
 
     try:
         requests.post(url, data=payload)
@@ -119,9 +119,9 @@ def create_salesforce_lead_csv(customer_data, handler, csv_file):
         customer_data['company_name'],
         customer_data['email'],
         'Claim-Pay-Per-Listing Lead',
-        '00D90000000lh7Z',
+        '00D90000000lh7Q',
         customer_data['mobile'],
-        '012900000009EYq'
+        '012900000009EYz'
     ]
     writer.writerow(content)
 
